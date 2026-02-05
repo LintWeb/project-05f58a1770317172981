@@ -3,9 +3,440 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>project-05f58a1770317172981</title>
+    <title>Healing Hands - Premium Massage Spa in Chattogram</title>
+    <meta name="description" content="Experience ultimate relaxation at Healing Hands Massage Spa. Professional massage services in Chattogram with 5.0 Google rating.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #2c5530 0%, #4a7c59 100%);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 2rem;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #e8f5e8;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(44, 85, 48, 0.8), rgba(74, 124, 89, 0.8)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="%23ffffff" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="%23ffffff" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="%23ffffff" opacity="0.15"/><circle cx="10" cy="80" r="0.5" fill="%23ffffff" opacity="0.15"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding-top: 80px;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 300;
+        }
+
+        .hero-content p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .rating {
+            display: inline-flex;
+            align-items: center;
+            background: rgba(255,255,255,0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            margin-bottom: 2rem;
+        }
+
+        .stars {
+            color: #ffd700;
+            margin-right: 0.5rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background: white;
+            color: #2c5530;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #e8f5e8;
+            transform: translateY(-2px);
+        }
+
+        /* Sections */
+        section {
+            padding: 5rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2.5rem;
+            color: #2c5530;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: #4a7c59;
+            margin: 1rem auto;
+            border-radius: 2px;
+        }
+
+        /* About Section */
+        .about {
+            background: white;
+            padding: 5rem 0;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #2c5530;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .about-image {
+            text-align: center;
+            font-size: 6rem;
+            color: #4a7c59;
+            opacity: 0.7;
+        }
+
+        /* Services Section */
+        .services {
+            background: #f8f9fa;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            color: #4a7c59;
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            margin-bottom: 1rem;
+            color: #2c5530;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: white;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .contact-item {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .contact-icon {
+            font-size: 2.5rem;
+            color: #4a7c59;
+            margin-bottom: 1rem;
+        }
+
+        .contact-item h3 {
+            margin-bottom: 1rem;
+            color: #2c5530;
+        }
+
+        .contact-item p {
+            margin-bottom: 0.5rem;
+        }
+
+        .rating-display {
+            background: #e8f5e8;
+            padding: 1rem;
+            border-radius: 10px;
+            display: inline-block;
+            margin-top: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #2c5530;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-content p {
+                font-size: 1.1rem;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav ul {
+                margin-top: 1rem;
+            }
+
+            nav ul li {
+                margin-left: 0;
+                margin-right: 1rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 15px;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- Blank white page -->
+    <header>
+        <nav class="container">
+            <div class="logo">Healing Hands</div>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Healing Hands</h1>
+                <p>Your Journey to Wellness Begins Here</p>
+                <div class="rating">
+                    <span class="stars">★★★★★</span>
+                    <span>5.0 (8 reviews)</span>
+                </div>
+                <a href="#contact" class="btn">Book Appointment</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Us</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Welcome to Healing Hands Massage Spa</h3>
+                    <p>At Healing Hands, we believe that true wellness comes from nurturing both body and mind. Our professional massage therapists combine traditional techniques with modern therapeutic approaches to provide you with an unparalleled relaxation experience.</p>
+                    <p>Located in the heart of Chattogram, we offer a serene environment where you can escape the stresses of daily life and rejuvenate your senses. Our commitment to excellence has earned us a perfect 5.0 rating from our valued clients.</p>
+                </div>
+                <div class="about-image">
+                    🙌
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">💆‍♀️</div>
+                    <h3>Swedish Massage</h3>
+                    <p>Gentle, flowing strokes that promote relaxation and improve circulation.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">👐</div>
+                    <h3>Deep Tissue Massage</h3>
+                    <p>Targeted pressure to release chronic muscle tension and knots.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🌿</div>
+                    <h3>Aromatherapy</h3>
+                    <p>Essential oils combined with massage for enhanced therapeutic benefits.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🏃‍♀️</div>
+                    <h3>Sports Massage</h3>
+                    <p>Specialized techniques for athletes and active individuals.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">😌</div>
+                    <h3>Reflexology</h3>
+                    <p>Pressure point therapy for the feet to promote overall wellness.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🧘‍♀️</div>
+                    <h3>Hot Stone Massage</h3>
+                    <p>Warm stones placed on key points for deep relaxation and pain relief.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contact & Location</h2>
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <h3>Location</h3>
+                    <p>Besides Rupayan Alif Meem Tower</p>
+                    <p>82 Chatteshwari Rd</p>
+                    <p>Chattogram, 4000</p>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📞</div>
+                    <h3>Phone</h3>
+                    <p>01781-388288</p>
+                    <p>Call to book your appointment</p>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">🕒</div>
+                    <h3>Hours</h3>
+                    <p>Everyday: 10:30 AM – 10:00 PM</p>
+                    <p>Sunday: Closed</p>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">⭐</div>
+                    <h3>Rating</h3>
+                    <div class="rating-display">
+                        <div class="stars">★★★★★</div>
+                        <p>5.0 Google Rating</p>
+                        <p>Based on 8 reviews</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Healing Hands Massage Spa. All rights reserved.</p>
+            <p>Category: Massage Spa | Professional Wellness Services</p>
+        </div>
+    </footer>
 </body>
 </html>
